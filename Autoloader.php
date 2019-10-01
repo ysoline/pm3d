@@ -9,7 +9,7 @@ class Autoloader
 
             $dirs = array(
                 'Controllers/',
-                'Models/Manager/',
+                'Models/',
 
             );
             foreach ($dirs as $dir) {

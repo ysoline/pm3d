@@ -42,5 +42,5 @@
 
 <?php
 $content = ob_get_clean();
-require('Views/Frontend/template.php');
+require('Views/template.php');
 ?>
