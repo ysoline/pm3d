@@ -28,11 +28,21 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <div class="d-flex flex-column flex-sm-row justify-content-between col-lg-11">
                     <ul class="nav navbar-nav">
-
+                        <li>
+                            <?php if (!isset($_SESSION['id_user'])) { ?>
+                            <a class="nav-link" href="inscription"><span
+                                    class="glyphicon glyphicon-user"></span>Inscription</a>
+                            <?php } ?>
+                        </li>
+                        <li>
+                            <?php if (isset($_SESSION['id_user'])) { ?>
+                            <a class="nav-link text-decoration-none mx-2" href="profil">Profil</a>
+                        </li>
                         <li>
                             <?php if (($_SESSION['rank_id']) == 1) { ?>
                             <a class="nav-link" href="administration">Administration</a>
-                            <?php } ?>
+                            <?php }
+                        } ?>
                     </ul>
                     <ul class="nav navbar-nav">
                         <li>
@@ -79,6 +89,7 @@
                     <span class="sr-only">Suivante</span>
                 </a>
             </div>
+
         </div>
     </header>
 
