@@ -39,10 +39,16 @@
                             <a class="nav-link text-decoration-none mx-2" href="profil">Profil</a>
                         </li>
                         <li>
-                            <?php if (($_SESSION['rank_id']) == 1) { ?>
+                            <?php if (($_SESSION['rank_slug']) == 'admin') { ?>
                             <a class="nav-link" href="administration">Administration</a>
                             <?php }
                         } ?>
+                        <li><a class="nav-link" href="peint">Peinture</a>
+                        </li>
+                        <li><a class="nav-link" href="art"> Arts</a></li>
+                        <li><a class="nav-link" href="diy">Diy</a></li>
+                        <li><a class="nav-link" href="print">Impressions
+                                3D</a></li>
                     </ul>
                     <ul class="nav navbar-nav">
                         <li>
@@ -58,6 +64,12 @@
                                 Déconnexion</a>
                             <?php } ?>
                         </li>
+                        <li><a class="nav-link" href="video"> Vidéos</a>
+                        </li>
+                        <li><a class="nav-link" href="galery">Galeries</a>
+                        </li>
+                        <li><a class="nav-link" href="contact">Contactez
+                                moi</a></li>
                     </ul>
                 </div>
             </div>
@@ -71,13 +83,13 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="public/img/1.jpg" alt="jean forteroche lac alaska">
+                        <img class="d-block w-100" src="public/img/1.png" alt="Benchi, bateau imprimé 3d image libre">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="public/img/2.jpg" alt="chien loup alaska">
+                        <img class="d-block w-100" src="public/img/2.png" alt="Robot imprimé 3d image libre">
                     </div>
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="public/img/3.jpg" alt="lac gelé alaska">
+                        <img class="d-block w-100" src="public/img/3.png" alt="Balle imprimée 3d image libre">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carousel_alaska" role="button" data-slide="prev">

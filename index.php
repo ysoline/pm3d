@@ -160,6 +160,25 @@ try {
         case 'mentionslegales':
             require 'Views/Frontend/mentionslegales.php';
             break;
+        case 'print':
+            break;
+        case 'art':
+            break;
+
+        case 'diy':
+            break;
+
+        case 'print':
+            break;
+
+        case 'video':
+            break;
+
+        case 'galery':
+            break;
+
+        case 'contact':
+            break;
 
         default:
             require 'Views/Frontend/404.php';

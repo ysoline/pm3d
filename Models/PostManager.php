@@ -90,4 +90,12 @@ class PostManager extends Manager
 
         return $addPost;
     }
+
+    public function getCategory($id)
+    {
+        $data = $this->_bdd->prepare('SELECT category_id, category.name, category.slug FROM posts INNER JOIN category ON category_id = category.id WHERE category_id = ?');
+        $category = $data->execute(array($id));
+
+        return $category;
+    }
 }

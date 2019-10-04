@@ -9,4 +9,4 @@
     </div>
 </div>
 
-<?php require('template.php'); ?>
+<?php require('Views/template.php'); ?>

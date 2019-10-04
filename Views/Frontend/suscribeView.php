@@ -7,7 +7,8 @@
         <div class="flex-nowrap justify-content-center">
             <div class=" d-flex justify-content-end mb-2">
                 <label for="pseudo" class="sr-only">Pseudo : </label>
-                <input type="text" id="pseudo" class="form-control" name="pseudo" placeholder="Pseudo" required autofocus>
+                <input type="text" id="pseudo" class="form-control" name="pseudo" placeholder="Pseudo" required
+                    autofocus>
             </div>
 
             <div class=" d-flex justify-content-end mb-2">
@@ -16,7 +17,8 @@
             </div>
             <div class=" d-flex justify-content-end mb-2">
                 <label for="password" class="sr-only">Confirmation mot de passe : </label>
-                <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Confirmer mot de passe" required>
+                <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Confirmer mot de passe"
+                    required>
             </div>
 
             <div class=" d-flex justify-content-end mb-2">
@@ -26,7 +28,8 @@
 
             <div class=" d-flex justify-content-end mb-2">
                 <label for="email" class="sr-only">Confirmation mail : </label>
-                <input type="email" class="form-control" id="email2" name="email2" placeholder="Confirmer email" required>
+                <input type="email" class="form-control" id="email2" name="email2" placeholder="Confirmer email"
+                    required>
             </div>
 
             <div class="d-flex justify-content-center mt-2">
@@ -40,4 +43,4 @@
 
 <?php $content = ob_get_clean(); ?>
 
-<?php require('template.php'); ?>
+<?php require('Views/template.php'); ?>

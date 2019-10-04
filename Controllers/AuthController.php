@@ -44,14 +44,18 @@ class AuthController
         $userManager = new UserManager;
         if (!empty($_POST['pseudo']) && !empty($_POST['pass'])) {
             $user = $userManager->getPseudo(htmlspecialchars($_POST['pseudo']));
-            $passOk = password_verify(htmlspecialchars($_POST['pass']), htmlspecialchars($user['pass']));
-            if ($passOk) {
-                $_SESSION['id_user'] = $user['id'];
-                $_SESSION['rank_id'] = $user['rank_id'];
-                $_SESSION['pseudo'] = $user['pseudo'];
-                header('Location: ./');
+            if ($user['pseudo'] === $_POST['pseudo']) {
+                $passOk = password_verify(htmlspecialchars($_POST['pass']), htmlspecialchars($user['pass']));
+                if ($passOk) {
+                    $_SESSION['id_user'] = $user['id'];
+                    $_SESSION['rank_slug'] = $user['rank_slug'];
+                    $_SESSION['pseudo'] = $user['pseudo'];
+                    header('Location: ./');
+                } else {
+                    throw new Exception("Mauvais identifiant ou mot de passe <a href='connexion' class='btn btn-outline-secondary btn-sm'>Réessayer ?</a>");
+                }
             } else {
-                throw new Exception("Mauvais identifiant ou mot de passe <a href='connexion' class='btn btn-outline-secondary btn-sm'>Réessayer ?</a>");
+                throw new Exception('Pseudo ou mot de passe incorrect');
             }
         } else {
             throw new Exception("Veuillez remplir tout les champs");
